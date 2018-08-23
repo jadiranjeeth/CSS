@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Positions</title>
+    <style>
+        .static{
+
+            border: 5px solid #4CAF50;
+            width: 300px;
+            color: blue;
+            text-align: center;
+            background-image: url("img/background.jpg");
+            position: static;/*no change*/
+            left: 50px;
+            right: 50px;
+           
+
+         }
+
+        .relative{
+
+            border: 5px solid #4CAF50;
+            width: 200px;
+            color: blue;
+            margin: 5px;
+            padding: 5px;
+            text-align: center;
+            background-image: url("img/background.jpg");
+          position: relative;/*it is change to R and L*/
+            left:200px;
+        }
+
+        .relative_new{
+
+            border: 5px solid #4CAF50;
+            width: 400px;
+            height: 100px;
+            color: blue;
+            text-align: center;
+           left: 50px;
+            top:50px;
+            margin-bottom: 30px;
+            background-image: url("img/background.jpg");
+            position: relative;
+
+        }
+
+        .absolute{
+
+            border: 2px solid red;
+            width: 200px;
+            color: blue;
+            text-align: center;
+            top: 50px;
+            left: 50px;
+            background-image: url("img/background.jpg");
+            position: absolute;
+
+        }
+
+        .fixed{
+
+            border: 2px solid #4CAF50;
+            width: 200px;
+            color: teal;
+            text-align: center;
+            top: 50px;
+            right: 50px;
+            margin-bottom: 100px;
+           background-image: url("img/background.jpg");
+            position: fixed;
+
+        }
+
+
+        .sticky{
+            background-image: url("img/background.jpg");
+            border: 2px solid #4CAF50;
+
+            top: 0;
+            padding: 5px;
+            position: sticky;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="static">
+        <p>Static</p>
+    </div>
+
+    <div class="relative">
+        <h1>relative</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam asperiores, distinctio error, eveniet facere itaque magnam minus nihil porro quasi recusandae sapiente sed, velit. Ab ad aliquam, aliquid cupiditate debitis eaque enim et exercitationem in itaque labore libero nobis officia quia quibusdam, similique tempore temporibus totam ut vero. A accusantium asperiores autem cum debitis delectus dicta ducimus ea earum ex fugiat, laudantium libero minus molestiae nam non odit officia officiis quia quis quisquam quo quod ratione unde vel velit voluptatum.</p>
+    </div>
+
+
+    <div class="relative_new">
+        <p>Ancestor</p>
+       <div class="absolute">
+           <p>Absolute</p>
+       </div>
+    </div>
+
+    <br><br>
+
+    <div class="fixed">
+        <p>Fixed</p>
+    </div>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, ducimus, repellat. Aspernatur at quae sed veniam. Cumque distinctio dolores est exercitationem explicabo hic libero, neque, porro, quisquam recusandae reprehenderit sit.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A deleniti dicta distinctio eligendi esse fugiat harum, incidunt ipsa maxime molestias necessitatibus omnis quae quidem repellat sapiente totam voluptatem voluptates voluptatum?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A deleniti dicta distinctio eligendi esse fugiat harum, incidunt ipsa maxime molestias necessitatibus omnis quae quidem repellat sapiente totam voluptatem voluptates voluptatum?</p>
+
+
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A deleniti dicta distinctio eligendi esse fugiat harum, incidunt ipsa maxime molestias necessitatibus omnis quae quidem repellat sapiente totam voluptatem voluptates voluptatum?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A deleniti dicta distinctio eligendi esse fugiat harum, incidunt ipsa maxime molestias necessitatibus omnis quae quidem repellat sapiente totam voluptatem voluptates voluptatum?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A deleniti dicta distinctio eligendi esse fugiat harum, incidunt ipsa maxime molestias necessitatibus omnis quae quidem repellat sapiente totam voluptatem voluptates voluptatum?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A deleniti dicta distinctio eligendi esse fugiat harum, incidunt ipsa maxime molestias necessitatibus omnis quae quidem repellat sapiente totam voluptatem voluptates voluptatum?</p>
+    <div class="sticky">
+        <p>sticky</p>
+    </div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A deleniti dicta distinctio eligendi esse fugiat harum, incidunt ipsa maxime molestias necessitatibus omnis quae quidem repellat sapiente totam voluptatem voluptates voluptatum?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A deleniti dicta distinctio eligendi esse fugiat harum, incidunt ipsa maxime molestias necessitatibus omnis quae quidem repellat sapiente totam voluptatem voluptates voluptatum?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A deleniti dicta distinctio eligendi esse fugiat harum, incidunt ipsa maxime molestias necessitatibus omnis quae quidem repellat sapiente totam voluptatem voluptates voluptatum?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A deleniti dicta distinctio eligendi esse fugiat harum, incidunt ipsa maxime molestias necessitatibus omnis quae quidem repellat sapiente totam voluptatem voluptates voluptatum?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A deleniti dicta distinctio eligendi esse fugiat harum, incidunt ipsa maxime molestias necessitatibus omnis quae quidem repellat sapiente totam voluptatem voluptates voluptatum?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A deleniti dicta distinctio eligendi esse fugiat harum, incidunt ipsa maxime molestias necessitatibus omnis quae quidem repellat sapiente totam voluptatem voluptates voluptatum?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A deleniti dicta distinctio eligendi esse fugiat harum, incidunt ipsa maxime molestias necessitatibus omnis quae quidem repellat sapiente totam voluptatem voluptates voluptatum?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A deleniti dicta distinctio eligendi esse fugiat harum, incidunt ipsa maxime molestias necessitatibus omnis quae quidem repellat sapiente totam voluptatem voluptates voluptatum?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A deleniti dicta distinctio eligendi esse fugiat harum, incidunt ipsa maxime molestias necessitatibus omnis quae quidem repellat sapiente totam voluptatem voluptates voluptatum?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A deleniti dicta distinctio eligendi esse fugiat harum, incidunt ipsa maxime molestias necessitatibus omnis quae quidem repellat sapiente totam voluptatem voluptates voluptatum?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A deleniti dicta distinctio eligendi esse fugiat harum, incidunt ipsa maxime molestias necessitatibus omnis quae quidem repellat sapiente totam voluptatem voluptates voluptatum?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A deleniti dicta distinctio eligendi esse fugiat harum, incidunt ipsa maxime molestias necessitatibus omnis quae quidem repellat sapiente totam voluptatem voluptates voluptatum?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A deleniti dicta distinctio eligendi esse fugiat harum, incidunt ipsa maxime molestias necessitatibus omnis quae quidem repellat sapiente totam voluptatem voluptates voluptatum?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A deleniti dicta distinctio eligendi esse fugiat harum, incidunt ipsa maxime molestias necessitatibus omnis quae quidem repellat sapiente totam voluptatem voluptates voluptatum?</p>
+
+
+
+</body>
+</html>

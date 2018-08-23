@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Vertical Navigation</title>
+    <style>
+        body{
+            font-family: "comic sans MS", sans-serif;
+        }
+        ul{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        aside{
+
+            float: left;
+            width: 250px;
+            text-align: center;
+            font-size: 25px;
+        }
+        li a{
+            text-decoration: none;
+            color: black;
+            padding: 14px 25px;
+            display: block;/*imp*/
+        }
+        li a:hover{
+            background-color: seagreen;
+            color: white;
+            border-radius: 50px;
+        }
+        li a.active{
+            background-color: #f50057;
+            color: #9c27b0;
+            border-radius: 50px;
+        }
+        li:nth-child(even){
+            background-color: #00bcd4;
+            border-radius: 50px;
+        }
+        li:nth-child(odd){
+            background-color: purple;
+            border-radius: 50px;
+        }
+    </style>
+    
+</head>
+<body>
+
+
+<aside>
+    <ul>
+        <li>
+            <a href="#" class="active">HTML</a>
+        </li>
+        <li>
+            <a href="#">JavaScript</a>
+        </li>
+        <li>
+            <a href="#">CSS</a>
+        </li>
+        <li>
+            <a href="#">TypeScript</a>
+        </li>
+        <li>
+            <a href="#">Bootstrap</a>
+        </li>
+        <li>
+            <a href="#">Angular JS</a>
+        </li>
+    </ul>
+</aside>
+
+</body>
+</html>

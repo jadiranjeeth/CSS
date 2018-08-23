@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS 3 Transitions</title>
+    <style>
+        div{
+            background-color: purple;
+            width: 100px;
+            height: 100px;
+        }
+        #t_width{
+            transition: width 2s;
+        }
+        #t_width:hover{
+            width: 300px;
+        }
+        #t_height{
+            transition: height 2s;
+
+        }
+        #t_height:hover{
+            width: 200px;
+        }
+        #t_both{
+            transition:width 2s, height 2s;
+        }
+        #t_both:hover{
+            width: 200px;
+            height: 200px;
+        }
+        #t_rotate{
+            margin-bottom: 100px;
+            transition: width 2s , transform 2s;
+        }
+        #t_rotate:hover{
+            width: 200px;
+            transform: rotate(180deg);
+        }
+        #t_timing{
+            margin-bottom: 200px;
+            transition: width 2s;
+            transition-timing-function: ease-in-out;
+            transition-delay: 2s; /*to delay the property*/
+        }
+        #t_timing:hover{
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+<h2> width transition</h2>
+<div id="t_width">
+</div>
+<h2> height transition</h2>
+<div id="t_height">
+</div>
+<h2> both transition</h2>
+<div id="t_both">
+
+</div>
+    <h2> rotate transition</h2>
+    <div id="t_rotate">
+    </div>
+    <h2>timing function transition</h2>
+    <div id="t_timing"></div>
+</body>
+</html>

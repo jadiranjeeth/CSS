@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Backgrounds</title>
+    <style>
+        body{
+            background-color: chartreuse;
+        }
+        .backgroundImage{
+            background-image: url("img/gallery1.jpeg");
+            width: 500px;
+            height: 100px;
+
+        }
+        .imagePosition{
+            background-color: deeppink;
+            height:200px ;
+            width: 500px;
+            background-image: url("img/nature.jpg");
+            background-repeat: no-repeat;
+            background-position: left top;
+        }
+        .imageRepeat{
+             background-color: blueviolet;
+            height: 200px;
+            width:500px;
+            background-image: url("img/nature.jpg");
+            background-repeat: repeat-x;
+        }
+        .shortcut{
+            text-align: center;
+              font-size: 60px;
+              padding-top: 20px;
+            height: 200px;
+            background:url("img/gallery2.jpeg") no-repeat fixed left bottom;
+        }
+    </style>
+
+</head>
+<body>
+
+<!-- BACKGROUND COLOR -->
+<p style="background-color:purple;height: 100px;font-size: 25px; text-align: center">I am TEAL background</p>
+
+<p>Shortcut Method</p>
+<div class="shortcut">ranjith kumar</div>
+<!-- BACKGROUND IMAGE -->
+<p>Background image</p>
+<div class="backgroundImage">
+    <h1>I have a background image</h1>
+</div>
+<br>
+<!-- BACKGROUND IMAGE POSITION -->
+<p>Background image position</p>
+<div class="imagePosition">
+</div>
+<br>
+<!-- BACKGROUND IMAGE REPEAT -->
+
+<p>Image repeat in X-axis</p>
+<div class="imageRepeat">
+</div>
+
+</body>
+</html>
