@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Form Validation</title>
+    <style>
+        #form-div , #form-data{
+            background-color: lightgray;
+            width: 300px;
+            text-align: center;
+            font-family: Arial,sans-serif;
+            padding: 10px;
+            margin: 0 0 10px 200px;
+        }
+        input[type='text'],input[type='password']{
+            border: 2px solid gray;
+            border-radius: 10px;
+        }
+        input[type='text']:focus,input[type='password']:focus{
+            outline: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="form-div">
+        <form>
+            <table>
+                <tr>
+                    <td>UserName</td>
+                    <td>
+                        <input type="text" id="username">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td>
+                        <input type="password" id="password">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="button" onclick="login()">Submit</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <div id="form-data">
+        <h3 id="userdata"></h3>
+        <h3 id="passdata"></h3>
+    </div>
+
+<script>
+    function login() {
+        console.log("Form Submitted");
+        var usernameField = document.querySelector('#username').value;
+        var passwordField = document.querySelector('#password').value;
+        var output = "Username : " + usernameField + " Password : " + passwordField;
+        console.log(output);
+        document.getElementById('userdata').innerHTML = usernameField;
+        document.getElementById('passdata').innerHTML = passwordField;
+    }
+
+    // get the elements
+    var username = document.querySelector('#username');
+    var password = document.querySelector('#password');
+
+    // Hookup Event Listeners
+    username.addEventListener('keyup',validateUser);
+    password.addEventListener('keyup',validatePassword);
+
+    // Add logic to functions
+    function validateUser() {
+        var user = username.value;
+        if(user === ''){
+            username.style.borderColor = 'gray';
+        }
+        else if(user === 'naveen'){
+            username.style.borderColor = 'green';
+        }
+        else{
+            username.style.borderColor = 'red';
+        }
+    }
+    
+    function validatePassword() {
+        var pass= password.value;
+        if(pass === ''){
+            password.style.borderColor = 'gray';
+        }
+        else if(pass === 'password'){
+            password.style.borderColor = 'green';
+        }
+        else{
+            password.style.borderColor = 'red';
+        }
+    }
+
+</script>
+
+</body>
+</html>

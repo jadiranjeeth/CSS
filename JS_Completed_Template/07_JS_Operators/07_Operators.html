@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Operators</title>
+    <style>
+        body{
+            margin: 0;
+            font-family: "Comic Sans MS",sans-serif;
+        }
+        h2{
+            background-color: lightgreen;
+            text-align: center;
+            padding: 10px;
+        }
+        div{
+            background-color: seagreen;
+            text-align: center;
+            color: white;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>JS Operators Example</h2>
+    <div>
+        <h1 id="display"></h1>
+    </div>
+
+</body>
+<script>
+
+    // Assignment operator =
+    var num1 = 10;
+    var output = "The value of num1 is  : " + num1;
+    document.getElementById('display').innerHTML = output;
+
+    // Arithmetic operators + - * /
+    var a = 10;
+    var b = 20;
+
+    var sum = a + b;
+    output = "The Sum of a , b is : " + sum;
+    document.getElementById('display').innerHTML = output;
+
+    var sub = a - b;
+    output = "The Sub of a , b is : " + sub;
+    document.getElementById('display').innerHTML = output;
+
+    var mul = a * b;
+    output = "The Mul of a , b is : " + mul;
+    document.getElementById('display').innerHTML = output;
+
+    var div = a / b;
+    output = "The div of a , b is : " + div;
+    document.getElementById('display').innerHTML = output;
+
+
+    // Short hand math += , -= , *= , /=
+    var a = 10;
+    var b = 20;
+    var sum = 0;
+    sum = sum + (a + b); // long way
+    sum += (a + b); // Shortcut way
+    output = "The Sum value is : " + sum;
+    document.getElementById('display').innerHTML = output;
+
+    // Conditional operators < , > , <= , >= , !=
+    var age = 25;
+    output = "";
+    if(age <= 30){
+        output = "Get a Job";
+    }
+    else{
+        output = "Get Marry";
+    }
+    document.getElementById('display').innerHTML = output;
+
+
+    // Unary Operator ++ , -- (pre , post)
+    var a = 10;
+    a = a + 1; // longest way
+    a += 1; // longer way
+    a++; // shortcut way
+    output = "The value of a is : " + a;
+    document.getElementById('display').innerHTML = output;
+
+    // Logical operators AND , OR
+    var inRelation = true;
+    var parentsAgreed = false;
+    output = "";
+    if(inRelation && parentsAgreed){
+        output = " Get Marry Soon";
+    }
+    else{
+        output = "Please Wait until the parents convinced";
+    }
+    document.getElementById('display').innerHTML = output;
+
+    // String Concatenation Operator (+)
+    var name = ' John ';
+    var age = 40;
+    var designation = ' Manager ';
+    output = name + age + designation;
+    document.getElementById('display').innerHTML = output;
+
+    // Ternary operator (? :)
+    var age = 27;
+    output = "";
+    (age < 18) ? output = "You are Minor" : output = "You are Major";
+    document.getElementById('display').innerHTML = output;
+
+
+    // Type of operator
+    var abc;
+    output = "The type of abc is : " + typeof abc;
+    document.getElementById('display').innerHTML = output;
+
+    abc = 10;
+    output = "The type of abc is : " + typeof abc;
+    document.getElementById('display').innerHTML = output;
+
+    abc = 'Naveen';
+    output = "The type of abc is : " + typeof abc;
+    document.getElementById('display').innerHTML = output;
+
+    abc = true;
+    output = "The type of abc is : " + typeof abc;
+    document.getElementById('display').innerHTML = output;
+
+    abc = null;
+    output = "The type of abc is : " + typeof abc;
+    document.getElementById('display').innerHTML = output;
+
+
+    // == operator
+    var a = 10;
+    var b = "10";
+    if(a == b){
+        output = "Both are Equal";
+    }
+    else{
+        output = "Both are NOT Equal";
+    }
+    document.getElementById('display').innerHTML = output;
+
+    // === operator
+    var a = 10;
+    var b = "10";
+    if(a === b){
+        output = "Both are Equal";
+    }
+    else{
+        output = "Both are NOT Equal";
+    }
+    document.getElementById('display').innerHTML = output;
+
+</script>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Objects in Depth</title>
+</head>
+<body>
+
+</body>
+
+<script>
+
+        // Create Simple Employee Object
+        var employee1 = {};
+        employee1.firstName = 'John';
+        employee1.lastName = 'Williams';
+        employee1.designation = 'Manager';
+
+        var employee2 = {};
+        employee2.firstName = 'Rajan';
+        employee2.lastName = 'Williams';
+        employee2.designation = 'Sales Manager';
+
+        function createEmployee(firstName,lastName,designation) {
+            var empObj = {};
+            empObj.firstName = firstName;
+            empObj.lastName = lastName;
+            empObj.designation = designation;
+            return empObj;
+        }
+
+        var employee3 = createEmployee('Jonathan','James','Director');
+
+        // Constructor Function
+        function Employee(firstName,lastName,designation) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.designation = designation;
+        }
+
+        var employee4 = new Employee('Naveen','Saggam','Team Lead');
+
+</script>
+</html>

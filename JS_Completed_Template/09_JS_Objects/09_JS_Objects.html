@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Objects</title>
+    <style>
+        body{
+            margin: 0;
+            font-family: "Comic Sans MS", sans-serif;
+        }
+        h2{
+            background-color: lightgreen;
+            text-align: center;
+            padding: 5px;
+        }
+        div{
+            background-color: seagreen;
+            text-align: center;
+            padding: 10px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>JS Objects Example</h2>
+    <div>
+        <h1 id="display"></h1>
+    </div>
+
+</body>
+
+<script>
+
+    //creation of objects
+    var obj = {};
+    console.log(obj);
+
+    //Adding properties to objects
+    var employee = {};
+
+    employee.name = 'John';
+    employee.age = 40;
+    employee.designation = 'Manager';
+
+    console.log(employee);
+
+    //Retrieving properties of objects
+    var empName = employee.name;
+    var output = "The Employee Name is : " + empName;
+    console.log(output);
+    document.getElementById('display').innerHTML = output;
+
+    //declaring Object Literals
+    var employee = {
+      name : 'Smith',
+      age : 35,
+      designation : 'Business Analyst'
+    };
+    console.log(employee);
+
+    //Access existing properties
+    var empDesignation = employee.designation;
+    output = "Employee Designation is : " + empDesignation;
+    console.log(output);
+    document.getElementById('display').innerHTML = output;
+
+    //Access Non Existing Properties
+    var empSalary = employee.salary;
+    console.log("Employee Salary is : " + empSalary);
+
+    // Usage of Dot and [] notations
+    var empDesignation = employee["designation"];
+    output = "Employee Designation is : " + empDesignation;
+    console.log(output);
+    document.getElementById('display').innerHTML = output;
+
+    // use of [] notation where dot is not used for invalid identifiers
+    var student = {
+      name : 'Rajan',
+      10 : 'Engineering'
+    };
+
+    var studentDept = student["10"];
+    console.log(studentDept);
+
+    // use of [] notation for accessing dynamic properties
+    var student = {
+        name : 'Rajan',
+        age : 25,
+        course : 'Engineering'
+    };
+
+    var dynamicProp = "name";
+    output = "The Dynamic Property is : " + student[dynamicProp];
+    console.log(output);
+    document.getElementById('display').innerHTML = output;
+
+
+    // nested Objects creation
+    var student = {
+        name : 'Mahesh',
+        age : 45,
+        course : 'Engineering',
+        address : {
+            city : 'Hyderabad',
+            state : 'Telangana',
+            country : 'India'
+
+        }
+    };
+
+    //Accessing them using dot notation
+    var maheshCity = student.address.city;
+    output = " Mahesh living in : " + maheshCity;
+    console.log(output);
+    document.getElementById('display').innerHTML = output;
+
+    //Accessing them using mix of dot and [] notation
+    var maheshCountry = student.address["country"];
+    output = "Mahesh belongs to : " + maheshCountry;
+    console.log(output);
+    document.getElementById('display').innerHTML = output;
+
+    // Add some properties to nested object and access them
+    console.log(student);
+
+    student.address.street = "Ameerpet";
+    console.log(student);
+
+    // === operator demo for objects (if pointing to same location in memory)
+    var employee1 = {
+        name : 'Naveen',
+        designation : 'Tech Lead'
+    };
+
+    var employee2 = employee1;
+    if(employee1 === employee2){
+        output = "Both are Equal";
+    }
+    else{
+        output = "Both are NOT Equal";
+    }
+    console.log(output);
+    document.getElementById('display').innerHTML = output;
+
+    // deleting a property from an object
+    console.log(student);
+    delete student.address.country;
+    console.log(student);
+
+</script>
+</html>
